@@ -17,6 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"></activity>
+        <receiver android:name=".HelloBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"></action>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
