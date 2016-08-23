@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("HolaMundo","onCreate");
 
-        //Intent i=new Intent(this,SecondActivity.class);
+        Intent i=new Intent(this,LayoutActivity.class);
         //i.putExtra("ValorPrueba","true");//El segundo valor es la información que se envía, el primero es el id
 
-        //startActivity(i);
+        startActivity(i);
 
         //access();
     }
