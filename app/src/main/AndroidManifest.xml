@@ -29,6 +29,15 @@
         
         <!--Registro de actividad para la localización-->
         <activity android:name=".LocationActivity">
+            <!--El intent filter es para que la aplicación sea iniciada en primer lugar-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".SensorActivity">
             <!--El intent filter es para que la aplicación sea iniciada en primer lugar-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
