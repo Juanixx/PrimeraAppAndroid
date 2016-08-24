@@ -38,6 +38,9 @@
             -->
         </activity>
         <activity android:name=".SensorActivity">
+
+        </activity>
+        <activity android:name=".DialogActivity">
             <!--El intent filter es para que la aplicación sea iniciada en primer lugar-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
