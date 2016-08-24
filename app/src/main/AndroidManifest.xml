@@ -3,6 +3,11 @@
     package="com.seguidor.juanix.primeraapp">
 
     <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,18 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".LayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--<activity android:name=".SecondActivity"></activity>
         <receiver android:name=".HelloBroadcastReceiver">
@@ -29,7 +26,16 @@
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED"></action>
             </intent-filter>
         </receiver>-->
+        
+        <!--Registro de actividad para la localización-->
+        <activity android:name=".LocationActivity">
+            <!--El intent filter es para que la aplicación sea iniciada en primer lugar-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
