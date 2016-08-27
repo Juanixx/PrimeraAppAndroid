@@ -7,7 +7,10 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.widget.Toast;
+
+import java.util.zip.Inflater;
 
 /**
  * Created by Juanix on 23/08/2016.
@@ -25,13 +28,13 @@ public class DialogActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        showBarDialog();
+        //showBarDialog();
         //Para mostrar un diálogo modal
         //showDialog();
         //showDialogWithList();
         //showDialogWithCheckBox();
         //showRingDialog();
-
+        showCustomDialog();
 
 
     }
@@ -144,5 +147,28 @@ public class DialogActivity extends Activity {
 
             }
         }).start();
+    }
+
+    private void showCustomDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        LayoutInflater inflater = getLayoutInflater();
+
+        builder.setView(inflater.inflate(R.layout.custom_layout,null))
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
