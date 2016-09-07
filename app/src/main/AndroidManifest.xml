@@ -42,12 +42,20 @@
         </activity>
         <activity android:name=".DialogActivity">
             <!--El intent filter es para que la aplicación sea iniciada en primer lugar-->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+    <activity android:name=".NoteActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".SaveNoteActivity">
+
+    </activity>
+
     </application>
 
 </manifest>
